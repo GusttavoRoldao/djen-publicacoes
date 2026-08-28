@@ -1,0 +1,11 @@
+node_modules/
+coverage/
+dist/
+*.log
+.env
+validation-output/
+.tmp-toolchain/
+src-tauri/target/
+src-tauri/gen/
+.qa/
+release/

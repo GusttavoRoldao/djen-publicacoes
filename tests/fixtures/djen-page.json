@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "message": "Sucesso",
+  "count": 1,
+  "items": [
+    {
+      "id": 46647310,
+      "data_disponibilizacao": "2026-08-26",
+      "siglaTribunal": "TJSP",
+      "tipoComunicacao": "Intimação",
+      "nomeOrgao": "Órgão de homologação",
+      "texto": "Conteúdo de teste da comunicação.",
+      "numero_processo": "00000012220208260000",
+      "meio": "D",
+      "link": "https://example.invalid/inteiro-teor",
+      "tipoDocumento": "Despacho",
+      "nomeClasse": "Habeas Corpus Criminal",
+      "numeroComunicacao": 1,
+      "hash": "vEkj97AdK6Wks5hQTOex4n6eLPQ1Gg",
+      "numeroprocessocommascara": "0000001-22.2020.8.26.0000",
+      "destinatarios": [
+        { "nome": "PARTE DE TESTE", "polo": "A" }
+      ],
+      "destinatarioadvogados": [
+        {
+          "advogado": {
+            "nome": "ADVOGADO DE TESTE",
+            "numero_oab": "654321N",
+            "uf_oab": "SP"
+          }
+        }
+      ]
+    }
+  ]
+}

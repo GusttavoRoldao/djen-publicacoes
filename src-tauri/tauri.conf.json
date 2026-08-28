@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DJEN Publicações",
+  "version": "0.1.0",
+  "identifier": "br.com.djenpublicacoes.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build:web",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "DJEN Publicações",
+        "width": 1240,
+        "height": 780,
+        "minWidth": 920,
+        "minHeight": 640,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; font-src 'self' data:; img-src 'self' asset: http://asset.localhost data:; style-src 'self' 'unsafe-inline'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "publisher": "Vance",
+    "homepage": "https://github.com/vance/djen-publicacoes",
+    "copyright": "Copyright (c) 2026 Vance. Licenciado sob a MIT.",
+    "license": "MIT",
+    "licenseFile": "../LICENSE",
+    "category": "Productivity",
+    "shortDescription": "Pesquisa e organiza publicações do DJEN neste computador.",
+    "longDescription": "Aplicativo desktop gratuito e open source para advogados pesquisarem, monitorarem e organizarem localmente publicações do Diário de Justiça Eletrônico Nacional por OAB e período. Os dados ficam somente neste computador.",
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": [
+          "PortugueseBR"
+        ],
+        "displayLanguageSelector": false,
+        "startMenuFolder": "DJEN Publicações",
+        "installerHooks": "installer-hooks.nsh",
+        "compression": "lzma"
+      }
+    },
+    "createUpdaterArtifacts": false
+  },
+  "plugins": {
+    "sql": {
+      "preload": [
+        "sqlite:djen-publicacoes.db"
+      ]
+    }
+  }
+}

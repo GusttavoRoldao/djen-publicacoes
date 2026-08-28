@@ -1,0 +1,18 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-capability",
+  "description": "Permissões mínimas da janela principal",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    {
+      "identifier": "http:default",
+      "allow": [
+        { "url": "https://comunicaapi.pje.jus.br/**" }
+      ]
+    },
+    "sql:default",
+    "sql:allow-execute",
+    "dialog:allow-save"
+  ]
+}
